@@ -33,7 +33,6 @@ public class CityDistanceManager {
     public String findClosestCityTo(String searchCity) {
         int c1 = 0;
         int min = 0;
-        String result = "";
         for (int i = 0; i < cities.length; i++) {
             if (searchCity.equals(cities[i])) {
                 c1 = i;
