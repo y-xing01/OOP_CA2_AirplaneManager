@@ -39,13 +39,34 @@ public class AirplaneManager {
     public void displayAllPassengerAirplanes() {
         // add code
         for (Airplane a : airplaneList){
+            if(a instanceof PassengerAirplane){
+                System.out.println("ID of Airplane : " + a.getId() + ", Type of Airplane : " + a.getType());
+            }
         }
     }
 
     //  write method getAllCargoAirplanes()
+    public void getAllCargoAirplane(){
+        for (Airplane a : airplaneList){
+            if(a instanceof CargoAirplane){
+                System.out.println("ID of Airplane : " + a.getId() + ", Type of Airplane : " + a.getType());
+            }
+        }
+    }
 
 
     // write  addPassengerNameToAirplane( airplaneId, passengerName)
+    public boolean addPassengerNameToAirplane(int airplaneId, String passengerName) {
+        Airplane tempList = null;
+        for (Airplane a : airplaneList) {
+            if (a.getId() == airplaneId && a instanceof PassengerAirplane) {
+                tempList = a;
+                ((PassengerAirplane) tempList).addPassenger(passengerName);
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     // write containsAirplane( Airplane plane )
@@ -59,14 +80,17 @@ public class AirplaneManager {
     }
 
 
-    // write findAirplaneByPassengerName( passengerName )
+//    // write findAirplaneByPassengerName( passengerName )
 //    public Airplane findAirplaneByPassengerName(String passengerName){
 //        for(Airplane a : airplaneList){
-//            if()
+//            if(a instanceof PassengerAirplane){
+//                if (a.)
+//            }
 //        }
 //    }
 
     // write displayAllAirplanesInOrderOfType( argument )
+//    public void displayAllAirplanesInOrderOfType()
 
 
 } // end of AirplaneManager

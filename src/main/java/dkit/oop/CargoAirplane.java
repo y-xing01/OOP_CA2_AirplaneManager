@@ -6,6 +6,7 @@ public class CargoAirplane extends Airplane {
     private int MAX_LOAD_KILOS;
     private int currentLoad;
 
+    // constructor
     CargoAirplane(String type, int MAX_LOAD_KILOS) {
         super(type);
 
@@ -18,9 +19,6 @@ public class CargoAirplane extends Airplane {
         this.MAX_LOAD_KILOS = MAX_LOAD_KILOS;
         this.currentLoad = currentLoad;
     }
-
-    // constructor
-
 
     // toString()
     @Override

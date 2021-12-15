@@ -31,10 +31,24 @@ public class CityDistanceManager {
 
     // Q4.2
     public String findClosestCityTo(String searchCity) {
-        // write code here
-        return "unknown";
-    }
+        int c1 = 0;
+        int min = 0;
+        String result = "";
+        for (int i = 0; i < cities.length; i++) {
+            if (searchCity.equals(cities[i])) {
+                c1 = i;
+            }
+        }
+        for (int i = 1; i < this.distances[c1].length; i++) {
+            min = this.distances[c1][0];
+            if (this.distances[c1][i] < min) {
+                min = this.distances[c1][i];
+                System.out.println(min);
+            }
+        }
 
+        return this.cities[min];
+    }
     /////////////// no changes required below this comment ///////////////
 
     public  void printCitiesData() {

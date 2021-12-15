@@ -49,32 +49,42 @@ public class App
         System.out.println("Display ALL Airplanes \n=====================");
         mgr.displayAllAirplanes();
 
-
+        System.out.println("\nDisplay ALL PASSENGER Airplanes \n===============================");
         mgr.displayAllPassengerAirplanes();
+
+        System.out.println("\nDisplay ALL CARGO Airplanes \n===========================");
+        mgr.getAllCargoAirplane();
 
         System.out.print("\nAirplane Manager contains passengerPlane1 : ");
         System.out.println(mgr.containsAirplane(passengerPlane1));
+
+        System.out.println("\n Add Passenger (Not Working)");
+        mgr.addPassengerNameToAirplane(3,"Joe joe");
+        System.out.println(passengerPlane2);
 
         //Question 4
         // Uncomment all the code below and implement the two methods
         // in the CityDistanceManager class.
 
-//        CityDistanceManager cityDistanceManager = new CityDistanceManager();
-//        cityDistanceManager.printCitiesData();
-//
-//        Scanner keyboard = new Scanner(System.in);
-//        System.out.print("\nPlease enter first city name:");
-//        String city1 = keyboard.nextLine();
-//        System.out.print("Please enter second city name:");
-//        String city2 = keyboard.nextLine();
-//
-//        int distance = cityDistanceManager.findDistanceBetween(city1, city2);
-//        System.out.println("Distance between " + city1 + " and " + city2 + " = " + distance);
-//
+        CityDistanceManager cityDistanceManager = new CityDistanceManager();
+        cityDistanceManager.printCitiesData();
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("\nPlease enter first city name:");
+        String city1 = keyboard.nextLine();
+        System.out.print("Please enter second city name:");
+        String city2 = keyboard.nextLine();
+
+        int distance = cityDistanceManager.findDistanceBetween(city1, city2);
+        System.out.println("Distance between " + city1 + " and " + city2 + " = " + distance);
+
 //        System.out.print("\nEnter base city name:");
 //        String baseCity = keyboard.nextLine();
-//
-//        String closestCity = cityDistanceManager.findClosestCityTo(baseCity);
+////
+        System.out.println();
+        String closestCity = cityDistanceManager.findClosestCityTo("Dublin");
+        System.out.println(closestCity);
+
 //        System.out.println("Closest city to " + baseCity+" = " + closestCity);
 
     }
