@@ -7,7 +7,7 @@ public class PassengerAirplane extends Airplane {
 
     // fields(Q2)
     private int MAX_NUM_PASSENGERS;
-    ArrayList<String> passengersList;
+    ArrayList<String> passengersList = new ArrayList<>();
 
     PassengerAirplane(String type, int MAX_NUM_PASSENGERS) {
         // code here
@@ -18,7 +18,7 @@ public class PassengerAirplane extends Airplane {
     public void addPassenger(String name) {
         // code here
         if(this.passengersList.size() < this.MAX_NUM_PASSENGERS){
-            passengersList.add(name);
+            this.passengersList.add(name);
         }
     }
 
