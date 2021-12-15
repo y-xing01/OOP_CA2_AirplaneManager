@@ -17,8 +17,16 @@ public class CityDistanceManager {
 
     // Q4.1
     public int findDistanceBetween(String city1, String city2) {
-        // write code here
-        return 0;
+        int c1 = 0, c2 = 0;
+        for(int i = 0; i < cities.length; i++){
+            if(city1.equals(cities[i])){
+                c1 = i;
+            }
+            if(city2.equals(cities[i])){
+                c2 = i;
+            }
+        }
+        return this.distances[c1][c2];
     }
 
     // Q4.2
