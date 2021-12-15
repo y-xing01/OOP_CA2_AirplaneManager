@@ -18,8 +18,10 @@ public class App
         System.out.println("OOP - CA2 - 20% - December 2021 - AirplaneManager");
 
         //Q2
-        // CargoAirplane cargoPlane1 = new CargoAirplane("Douglas DC-4",20000);
-        // CargoAirplane cargoPlane2 = new CargoAirplane("Boeing C-7000",25000);
+         CargoAirplane cargoPlane1 = new CargoAirplane("Douglas DC-4",20000);
+         CargoAirplane cargoPlane2 = new CargoAirplane("Boeing C-7000",25000);
+        System.out.println(cargoPlane1);
+        System.out.println(cargoPlane2);
 
         // display the two objects
 
