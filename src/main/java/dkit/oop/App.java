@@ -46,7 +46,14 @@ public class App
         mgr.add(passengerPlane2);
 
         // write calls to methods implemented for Q3.
+        System.out.println("Display ALL Airplanes \n=====================");
+        mgr.displayAllAirplanes();
 
+
+        mgr.displayAllPassengerAirplanes();
+
+        System.out.print("\nAirplane Manager contains passengerPlane1 : ");
+        System.out.println(mgr.containsAirplane(passengerPlane1));
 
         //Question 4
         // Uncomment all the code below and implement the two methods

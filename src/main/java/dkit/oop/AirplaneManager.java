@@ -24,14 +24,22 @@ public class AirplaneManager {
     //Q3.
 
     // write add() method
-
+    public ArrayList<Airplane> add(Airplane airplane){
+        this.airplaneList.add(airplane);
+        return this.airplaneList;
+    }
 
     public void displayAllAirplanes() {
         // add code
+        for (Airplane a : airplaneList){
+            System.out.println("ID of Airplane : " + a.getId() + ", Type of Airplane : " + a.getType());
+        }
     }
 
     public void displayAllPassengerAirplanes() {
         // add code
+        for (Airplane a : airplaneList){
+        }
     }
 
     //  write method getAllCargoAirplanes()
@@ -41,9 +49,22 @@ public class AirplaneManager {
 
 
     // write containsAirplane( Airplane plane )
+    public boolean containsAirplane(Airplane plane){
+        for(Airplane a : airplaneList){
+            if(a.getId() == plane.getId()){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     // write findAirplaneByPassengerName( passengerName )
+//    public Airplane findAirplaneByPassengerName(String passengerName){
+//        for(Airplane a : airplaneList){
+//            if()
+//        }
+//    }
 
     // write displayAllAirplanesInOrderOfType( argument )
 
